@@ -15,4 +15,6 @@
     font-family: 'formigaextrabold', sans-serif;
     font-weight: normal;
     font-style: normal;
+    font-size: 48px;
+    font-feature-settings: "ss01" 1; /* Enables single-story 'a' */
 }

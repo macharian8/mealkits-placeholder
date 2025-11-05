@@ -12,62 +12,72 @@
       body {
         font-family: "Mona Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: <weight>;
         font-style: normal;
         font-variation-settings: "wdth" 100;
         font-feature-settings: "ss01" 1; /* Enables single-story 'a' */
       }
-      h1, h2, h3, h4,h5,h6 {
-        font-family: "Mona Sans", sans-serif;
-      }
+      
     </style>
   </head>
 
-  <body class="bg-[#013122] text-[#1c1c1c]">
-    <main class="flex flex-col md:flex-row min-h-screen">
-      <!-- Left: Image -->
-      <div class="md:w-1/2 w-full h-64 md:h-auto">
-        <img
-          src="bowl.png"
-          alt="Bowl of nuts and seeds"
-          class="w-full h-full object-cover"
-        />
-      </div>
+  <body class="bg-gradient-to-tl from-[#003734] to-[#002A28] text-[#1c1c1c] relative overflow-hidden">
 
-      <!-- Right: Content -->
-      <div
-        class="md:w-1/2 w-full bg-[#fef8e6] flex flex-col justify-center px-6 py-12 md:px-16"
-      >
+    <main class="relative min-h-screen w-full overflow-hidden">
+        <!-- Background Image -->
         <img
-          src="logo.svg"
-          alt="Tegani logo"
-          class="w-32 mb-6"
+            src="bowl.png"
+            alt="Bowl of nuts and seeds"
+            class="absolute inset-0 w-full h-full object-cover z-0"
         />
 
-        <h1 class="text-3xl md:text-4xl font-black leading-snug formiga">
-          Launching soon: <span class="text-[#f47d20]">the good stuff.</span>
-        </h1>
+        <!-- Floating Content Box -->
+        <div
+            class="relative z-10 flex items-center justify-center min-h-screen px-4"
+        >
+            <div
+            class="relative bg-[#fef8e6]/85 backdrop-blur-md rounded-[32px] max-w-2xl w-full py-12 px-8 sm:p-10 md:p-12 text-center md:text-left shadow-lg
+                    md:absolute md:right-[10%] md:top-1/2 md:transform md:-translate-y-1/2 border border-transparent
+                    before:content-[''] before:absolute before:inset-0 before:rounded-[32px]
+                    before:border before:border-transparent before:z-[-1]
+                    before:bg-gradient-to-br before:from-white/70 before:via-white/10 before:to-gray-300/30
+                    before:pointer-events-none before:-m-[1px] before:p-[1px]"
 
-        <p class="mt-4 max-w-lg text-base md:text-lg leading-relaxed">
-          Wholesome, ready-to-go meal kits and better-for-you snacks made with
-          the good stuff: nuts, seeds, grains, flavor, and intention.
-        </p>
+            >
+            <img
+                src="logo.svg"
+                alt="Tegani logo"
+                class="w-28 mx-auto md:mx-0 mb-6"
+            />
 
-        <!-- <form class="mt-6 flex flex-col sm:flex-row gap-4 max-w-md">
-          <input
-            type="email"
-            required
-            placeholder="Your email"
-            class="flex-1 px-4 py-3 rounded-md border border-gray-300 text-base focus:outline-none focus:ring-2 focus:ring-[#f47d20]"
-          />
-          <button
-            type="submit"
-            class="bg-[#1c1c1c] text-white px-6 py-3 rounded-md hover:bg-[#333]"
-          >
-            Tell me when it&apos;s ready
-          </button>
-        </form> -->
-      </div>
+            <h1 class="font-black leading-tight text-4xl sm:text-5xl md:text-6xl formiga">
+                Launching soon: <br>
+                <span class="text-[#f47d20]">the good stuff.</span>
+            </h1>
+
+            <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-800">
+                Wholesome, ready-to-go meal kits and better-for-you snacks made with
+                the good stuff: nuts, seeds, grains, flavor, and intention.
+            </p>
+
+            <!-- Uncomment if you want the form -->
+            <!--
+            <form class="mt-6 flex flex-col sm:flex-row gap-4">
+                <input
+                type="email"
+                required
+                placeholder="Your email"
+                class="flex-1 px-4 py-3 rounded-md border border-gray-300 text-base focus:outline-none focus:ring-2 focus:ring-[#f47d20]"
+                />
+                <button
+                type="submit"
+                class="bg-[#1c1c1c] text-white px-6 py-3 rounded-md hover:bg-[#333]"
+                >
+                Tell me when it&apos;s ready
+                </button>
+            </form>
+            -->
+            </div>
+        </div>
     </main>
   </body>
 </html>
